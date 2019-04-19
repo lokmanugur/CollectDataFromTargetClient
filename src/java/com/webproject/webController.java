@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class webController {
     @RequestMapping(value="/",method = RequestMethod.GET)
     public String controller(ModelMap model){
-        model.addAttribute("message","Domian Info");
+        model.addAttribute("message","Domain Info");
     return "index";
     }
     
