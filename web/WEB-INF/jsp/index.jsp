@@ -14,14 +14,16 @@
         <title>JSP Page</title>
     </head>
     <body>  
+        <div style="text-align: center">
         <form name="index" action="index" method="POST" >
             <ul>
-                <li><label>Write Your Domain Name:</label> <input type="text" name="domain_name" /></li>
-                <li><label></label> <input type="submit" name="submit" value="OK" class="btn"></li>
+                <label>Write Your Domain Name:</label> <input type="text" name="domain_name" />
+                <label></label> <input type="submit" name="submit" value="OK" class="btn">
             </ul>
         </form>
         <c:forEach items="${message}" var="item">
             ${item}<br>
         </c:forEach>
+       </div>
     </body>
 </html>
