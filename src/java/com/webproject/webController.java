@@ -25,7 +25,7 @@ public class webController {
     }
     
     @RequestMapping(params={"submit"},method=RequestMethod.POST)
-    public String getDomain(ModelMap model,@RequestParam(value="domain_name",required = true) String domain_name)throws IOException{
+    public String getDomain(ModelMap model,@RequestParam(value="domain_name",required = true, defaultValue ="") String domain_name)throws IOException{
                 WhoIs whois=new WhoIs();
                 model.addAttribute("message",whois.getWhois(domain_name));
     return "index";
